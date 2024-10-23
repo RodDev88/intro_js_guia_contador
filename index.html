@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--ESTE ES EL CODIGO DE LA GUÍA-->
+    <!--párrafo hmtl con id p-1, se inicializa en 0, y es el lugar donde se mostrarán los cambios-->
+    <p id="p-1">0</p>
+
+    <!--Button con atributo onclick que ejecuta el script JS-->
+    <button
+      onclick="
+//variabe parrafo selecciona el ele del DOM con id p-1   
+parrafo = document.querySelector('#p-1')
+
+//var cuenta accede al contenido del parrafo con innerHTML 
+//transforma contenido usando Number
+cuenta = Number(parrafo.innerHTML)
+
+//reasignamos valor a cuenta incrementando el valor en 1
+cuenta = cuenta + 1
+
+//wl contenido del parrafo se actualiza con el nuevo valor
+parrafo.innerHTML = cuenta
+"
+    >
+      Incrementar
+    </button>
+    <!-- ESTE ES MI CÓDIGO, LO HICE SIN MIRAR, Y PESE A UN ERROR LO LOGRÉ
+     
+    MI ERROR FUE tomar el elemento HTML numero_base, no su contenido...
+
+    <p id="numero_base">0</p>
+    <button
+      onclick="
+    numero_base = document.querySelector('#numero_base')
+
+    numero = Number(numero_base.innerHTML)
+
+    resultado = numero + 1
+
+    numero_base.innerHTML = resultado;
+    
+    "
+    >
+      Incrementa
+    </button>
+
+    -->
+  </body>
+</html>
